@@ -1,0 +1,64 @@
+﻿<Window x:Class = "XAMLButton.MainWindow" 
+   xmlns = "http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+   xmlns:x = "http://schemas.microsoft.com/winfx/2006/xaml" 
+   Title = "Testing GitHub w/ WPF App" 
+   Height = "1080"
+   Width = "1920" 
+   >
+
+
+    <StackPanel  Orientation="Horizontal" Opacity=".5" HorizontalAlignment="Center" Width="1920">
+        <!-- Left Group Box -->
+        <StackPanel Margin="0" Width="640" HorizontalAlignment="Left" >
+            <Rectangle Fill="Red" Width="50" Height="50" Margin="5" />
+            <Rectangle Fill="Blue" Width="50" Height="50" Margin="5" />
+            <Rectangle Fill="Green" Width="50" Height="50" Margin="5" />
+            <Rectangle Fill="Purple" Width="50" Height="50" Margin="5" />
+        </StackPanel>
+        
+        <!-- Middle Group Box -->
+        <StackPanel Width="640">
+            <Button x:Name = "button1"  
+            Content = "Hover Here" 
+            Click = "OnClick1" 
+            ClickMode = "Hover"
+            Margin = "10"  
+            Width = "100"
+            Height="20"
+            HorizontalAlignment = "Center" 
+            Foreground = "Gray"/>
+            <Button x:Name = "button2"  
+            Content = "OnClickDown" 
+            Click = "OnClick2" 
+            ClickMode = "Press" 
+            Margin = "10"  
+            Width = "150" 
+            Height="20"
+            HorizontalAlignment = "Center" 
+            Foreground = "Gray"/>
+            <Button x:Name = "button3"  
+            Content = "OnClickUp" 
+            Click = "OnClick3" 
+            ClickMode = "Release" 
+            Margin = "10"  
+            Width = "150" 
+            Height="20"
+            HorizontalAlignment = "Center" 
+            Foreground = "Gray"/>
+        </StackPanel>
+        
+        <!-- Right Group Box -->
+        <TextBlock  Name="TestOutputFromButtons" 
+            TextWrapping="Wrap" Background="AntiqueWhite" TextAlignment="Center" FontSize="32" Width="640"
+>              Output Here
+            
+        </TextBlock>
+
+    </StackPanel>
+
+    
+
+</Window>
+    
+    
+    
