@@ -10,10 +10,24 @@
     <StackPanel  Orientation="Horizontal" Opacity=".5" HorizontalAlignment="Center" Width="1920">
         <!-- Left Group Box -->
         <StackPanel Margin="0" Width="640" HorizontalAlignment="Left" >
-            <Rectangle Fill="Red" Width="50" Height="50" Margin="5" />
-            <Rectangle Fill="Blue" Width="50" Height="50" Margin="5" />
-            <Rectangle Fill="Green" Width="50" Height="50" Margin="5" />
-            <Rectangle Fill="Purple" Width="50" Height="50" Margin="5" />
+            <TextBlock
+                Height="200"
+                Width="400"
+                Text="Hit Button To Toggle Middle Section"
+                TextAlignment="Center"
+                FontSize="48"
+                TextWrapping="Wrap"
+                />
+            <Button x:Name="OnOffButton" 
+                    Content="Toggle Options"
+                    Margin="0,100,0,0"
+                    Width="100"
+                    Height="100"
+                    
+                    ClickMode="Press"
+                    Click="ToggleOptionsClick"
+                    />
+
         </StackPanel>
         
         <!-- Middle Group Box -->

@@ -15,9 +15,12 @@ namespace XAMLButton
             InitializeComponent();
 
             SetupTestOutputTexBlock();
+            SetupMiddleSection();
         }
         void OnClick1(object sender, RoutedEventArgs e)
         {
+            if (button1.Opacity == 0) { return; }
+
             button1.Foreground = new SolidColorBrush(Colors.Blue);
 
             TestOutputFromButtons.Text = "You hovered over the first button.";
@@ -26,6 +29,8 @@ namespace XAMLButton
         }
         void OnClick2(object sender, RoutedEventArgs e)
         {
+            if (button2.Opacity == 0) { return; }
+
             button2.Foreground = new SolidColorBrush(Colors.Green);
 
             TestOutputFromButtons.Text = "You hit the second button.";
@@ -34,6 +39,8 @@ namespace XAMLButton
         }
         void OnClick3(object sender, RoutedEventArgs e)
         {
+            if (button3.Opacity == 0) { return; }
+
             button1.Foreground = new SolidColorBrush(Colors.Green);
             button2.Foreground = new SolidColorBrush(Colors.Blue);
 
@@ -45,6 +52,29 @@ namespace XAMLButton
         void SetupTestOutputTexBlock()
         {
             TestOutputFromButtons.Text = "";
+        }
+
+        void SetupMiddleSection()
+        {
+            button1.Opacity = 0;
+            button2.Opacity = 0;
+            button3.Opacity = 0;
+        }
+
+        void ToggleOptionsClick(object sender, RoutedEventArgs e)
+        {
+            if (button3.Opacity == 0)
+            {
+                button1.Opacity = 1;
+                button2.Opacity = 1;
+                button3.Opacity = 1;
+            }
+            else
+            {
+                button1.Opacity = 0;
+                button2.Opacity = 0;
+                button3.Opacity = 0;
+            }
         }
 
 
