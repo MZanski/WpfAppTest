@@ -64,7 +64,7 @@
         <!-- Right Group Box -->
         <TextBlock  Name="TestOutputFromButtons" 
             TextWrapping="Wrap" Background="AntiqueWhite" TextAlignment="Center" FontSize="32" Width="640"
->              Output Here
+>              Output Here - Added for Test
             
         </TextBlock>
 
